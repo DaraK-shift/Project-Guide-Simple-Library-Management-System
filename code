@@ -116,12 +116,14 @@ class Book{
     }
 
     public void borrowBook(String borrowerName){
-            if(borrowerName == null){
-                System.out.println("The book is borrowed successfully!");
-            } else {
-                System.out.println("The book is already borrowed!");
-            }
+        if (this.borrowerName == null) {
+            this.borrowerName = borrowerName;
+            System.out.println(borrowerName + " has successfully borrowed the book!");
+        } else {
+            System.out.println("The book is already borrowed!");
+        }
     }
+
 
     public String getBorrowerName() {
         return borrowerName;
